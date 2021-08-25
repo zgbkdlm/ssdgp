@@ -1,0 +1,46 @@
+name: Python Unittest EKFS
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Workflow run name'
+        required: true
+        default: 'Manual unittest'
+      reason:
+        description: 'Reason'
+        required: true
+        default: 'Scipts need to be tested'
+    
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7, 3.8, 3.9]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        working-directory: ./python_notebooks
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8
+          pip install numpy scipy jax[cpu]
+      - name: Lint with flake8
+        working-directory: ./python_notebooks
+        run: |
+          # stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+      - name: Test with unittest
+        working-directory: ./python_notebooks
+        run: |
+          python test_fs.py
+          
