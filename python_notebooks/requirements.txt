@@ -1,0 +1,8 @@
+numpy
+scipy
+matplotlib
+tensorflow
+gpflow
+jax
+jaxlib
+tme>=0.1.3
