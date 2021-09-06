@@ -20,11 +20,12 @@ You can find two folders `./matlab` and `./python_notebooks` which contain imple
 @article{Zhao2020SSDGP,
 	title={Deep State-space {G}aussian Processes},
 	author={Zheng Zhao and Muhammad Emzir and Simo S{\"a}rkk{\"a}},
-	journal={arXiv preprint arXiv:2008.04733},
-	year={2020}
+	journal={Statistics and Computing},
+	year={2021},
+	note={in press}
 }
 ```
-(submitted to Statistics and Computing, minor revision)
+(Accepted for publication in Statistics and Computing, preprint can be found at [https://arxiv.org/abs/2008.04733](https://arxiv.org/abs/2008.04733))
 
 ```bibtex
 @phdthesis{Zhao2021Thesis,
