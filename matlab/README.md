@@ -60,7 +60,7 @@ query_times = ... % Times for interpolation if you have any.
 posterior
 ```
 
-You may find a bit confused with the line `u21 = dgp.DGPNode(f, 'l', g, 'u21', @gp.matern12, [0.2 1.16]);`. This means that `u21` is a DGP node named `'u21'` that is a parent of the node `f`, and `u21` parametrise the length scale (i.e., `'l'`) of `f`. Moreover, the covaraince function of `u21` is Matern 1/2 with parameters `l=0.2` and `sigma=1.16`. The parameters are transformed by the function `g`. Okay, let's go a bit deeper, can you tell me what does the following code block do? 
+You may find a bit confused with the line `u21 = dgp.DGPNode(f, 'l', g, 'u21', @gp.matern12, [0.2 1.16]);`. This means that `u21` is a DGP node named `'u21'` that is a parent of the node `f`, and that `u21` parametrises the length scale (i.e., `'l'`) of `f`. Moreover, the covaraince function of `u21` is Matern 1/2 with parameters `l=0.2` and `sigma=1.16`. The parameters are transformed by the function `g`. Okay, let's go a bit deeper, can you tell me what does the following code block do? 
 
 ```matlab
 hyper_para = [1, 1];
@@ -68,8 +68,8 @@ hyper_para2 = [0.01 0.9];
 
 f = dgp.DGPNode('f', [], g, 'f', @gp.matern32_ns, hyper_para);
 
-u21 = dgp.DGPNode(f, 'l', g, 'u21', @gp.matern12, hyper_para2); 
-u22 = dgp.DGPNode(f, 'sigma', g, 'u22', @gp.matern12, hyper_para2);
+u21 = dgp.DGPNode(f, 'l', g, 'u21', @gp.matern12_ns, hyper_para2); 
+u22 = dgp.DGPNode(f, 'sigma', g, 'u22', @gp.matern12_ns, hyper_para2);
 u31 = dgp.DGPNode(u21, 'l', g, 'u31', @gp.matern12, hyper_para2);
 u32 = dgp.DGPNode(u21, 'sigma', g, 'u32', @gp.matern12, hyper_para2);
 u33 = dgp.DGPNode(u22, 'l', g, 'u33', @gp.matern12, hyper_para2);
