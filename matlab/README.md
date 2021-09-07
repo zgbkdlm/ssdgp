@@ -9,6 +9,8 @@ the following runnable files that you can start with:
 
 3. `./rectangle_SSMAP.m`. Use a state-space MAP method to solve SS-DGP regression problems with data generated from a rectangular signal.
 
+4. `./draw_samples_ssdgp_m32.m`. Draw samples from a Matern 3/2 SS-DGP and generate animation.
+
 # Installation
 
 No installation is required. Just git clone or download the codes to your local, and run the scripts in `./`.
