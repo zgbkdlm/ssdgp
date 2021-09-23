@@ -21,6 +21,9 @@ You can find two folders `./matlab` and `./python_notebooks` which contain imple
 	title={Deep State-space {G}aussian Processes},
 	author={Zheng Zhao and Muhammad Emzir and Simo S{\"a}rkk{\"a}},
 	journal={Statistics and Computing},
+	volume={31},
+	number={6},
+	pages={75},
 	year={2021},
 	note={in press}
 }
