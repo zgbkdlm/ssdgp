@@ -24,8 +24,7 @@ You can find two folders `./matlab` and `./python_notebooks` which contain imple
 	volume={31},
 	number={6},
 	pages={75},
-	year={2021},
-	note={in press}
+	year={2021}
 }
 ```
 (Accepted for publication in Statistics and Computing, preprint can be found at [https://arxiv.org/abs/2008.04733](https://arxiv.org/abs/2008.04733))
