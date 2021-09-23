@@ -27,7 +27,7 @@ You can find two folders `./matlab` and `./python_notebooks` which contain imple
 	year={2021}
 }
 ```
-(Accepted for publication in Statistics and Computing, preprint can be found at [https://arxiv.org/abs/2008.04733](https://arxiv.org/abs/2008.04733))
+Preprint can be found at [https://arxiv.org/abs/2008.04733](https://arxiv.org/abs/2008.04733).
 
 ```bibtex
 @phdthesis{Zhao2021Thesis,
