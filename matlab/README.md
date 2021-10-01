@@ -86,7 +86,7 @@ Note that the names of DGP nodes must be unique. Also, `f` must always come firs
 
 To be honest, I don't like this Matlab implementation, and I think these codes are crap. The story is that I tried to make the code automatic for generating DGP models, but it turns the implementation to be quite messy and took me a ton of time to test.
 
-Nonetheless, the codes are safe to use, as they are tested. If you use Python, I recommend the reader to check the Python implementation instead.
+Nonetheless, the codes are safe to use, as they are tested. If you use Python, I recommend the reader to check the Python notebook implementation in `../pythoon_notebooks` instead. Although the Python notebooks do not cover the full picture of SSDGPs, they should be enough to help you get started at least, I think.
 
 # Citation
 
