@@ -31,13 +31,12 @@ Preprint can be found at [https://arxiv.org/abs/2008.04733](https://arxiv.org/ab
 
 ```bibtex
 @phdthesis{Zhao2021Thesis,
-	title = {State-space deep Gaussian processes},
+	title = {State-space deep Gaussian processes with applications},
 	author = {Zheng Zhao},
 	school = {Aalto University},
 	year = {2021},
 }
 ```
-(will be published around the end of 2021)
 
 # License
 
