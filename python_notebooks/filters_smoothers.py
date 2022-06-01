@@ -15,11 +15,10 @@ from typing import Callable, Tuple
 def ekfs(f_Q: Callable, H: jnp.ndarray, R: float,
          m0: jnp.ndarray, P0: jnp.ndarray,
          dts: jnp.ndarray, ys: jnp.ndarray):
-    @jit
+         
     def jac_disc(u, dt):
         return jacfwd(lambda zz, ddt: f_Q(zz, ddt)[0], argnums=0)(u, dt)
 
-    @jit
     def scan_ekf(carry, elem):
         mf, Pf, mp, Pp, _ = carry
         dt, y = elem
@@ -37,7 +36,6 @@ def ekfs(f_Q: Callable, H: jnp.ndarray, R: float,
         Pf = Pp - K @ K.T * S
         return (mf, Pf, mp, Pp, jac_f), (mf, Pf, mp, Pp, jac_f)
 
-    @jit
     def scan_eks(carry, elem):
         ms, Ps = carry
         mf, Pf, mp, Pp, jac_f = elem
