@@ -5,4 +5,4 @@ tensorflow
 gpflow
 jax
 jaxlib
-tme>=0.1.3
+tme>=0.1.4
